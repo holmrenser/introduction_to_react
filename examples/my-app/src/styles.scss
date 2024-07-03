@@ -1,0 +1,12 @@
+@charset "utf-8";
+@use "bulma/bulma.scss";
+
+body {
+  margin: 8em;
+  font-family: monospace;
+  input#orthogroup-select {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+}
