@@ -1,3 +1,18 @@
+# LaTeX
+slides/*.aux
+slides/*.bbl
+slides/*.bcf
+slides/*.fdb_latexmk
+slides/*.nav
+slides/*.out
+slides/*.snm
+slides/*.run.xml
+slides/*.fls
+slides/*.synctex.gz
+slides/*.toc
+
+
+
 # Logs
 logs
 *.log

@@ -1,0 +1,131 @@
+\def\beamer@wurbeamer@version{0.0.1}
+\ProvidesPackage{beamerthemewur}
+\RequirePackage{pgf}
+
+%colors
+%                                               
+\definecolor{lightblue}{RGB}{106, 173, 228} % hex #6aade4
+\definecolor{green}{RGB}{0, 138, 0} % hex #008a00
+\definecolor{earth}{RGB}{208, 185, 114}
+\definecolor{lightgrey}{RGB}{169, 169, 169}
+
+\setbeamercolor*{normal text}{fg=black,bg=white}
+\setbeamercolor*{alerted text}{fg=green}
+\setbeamercolor*{structure}{fg=lightblue}
+\setbeamercolor*{frametitle}{fg=black}
+\setbeamercolor*{subtitle}{fg=lightgrey}
+
+% font styles
+\usepackage[scaled]{helvet}
+\usefonttheme[onlymath]{serif}
+\setbeamerfont{title}{size=\huge}
+\setbeamerfont{subtitle}{size=\normalsize}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{institution}{size=\footnotesize}
+\setbeamerfont{date}{size=\scriptsize}
+\setbeamerfont{footnote}{size=\tiny}
+
+% citation styles
+
+\renewbibmacro*{cite}{%
+  \iffieldundef{shorthand}
+    {\ifthenelse{\ifnameundef{labelname}\OR\iffieldundef{labelyear}}
+       {\usebibmacro{cite:label}}
+       {\printnames{labelname}}%
+     \setunit{\addcomma\space}%
+     \usebibmacro{journal}%
+     \setunit{\addspace}%
+     \usebibmacro{cite:labeldate+extradate}}
+    {\usebibmacro{cite:shorthand}}}
+
+\renewbibmacro*{cite:labeldate+extradate}{%
+  \iffieldundef{labelyear}
+    {}
+    {\printtext[parens]{%
+       \printtext[bibhyperref]{%
+         \printlabeldateextra}}}}
+
+
+
+%layout
+\newlength\barheight\setlength\barheight{\paperheight}
+\divide\barheight by 12
+
+% \setbeamertemplate{frametitle}{\insertframetitle} 
+
+%-------------------------------------------------------------------------------
+%                                                                       logo bar
+
+% \newlength\logobarheight\setlength\logobarheight{\barheight}
+% \newlength\logosep\setlength\logosep{0.5\logobarheight}
+% 
+% \pgfdeclareimage[height=\logobarheight]{wur_logo}{01_WUR_standard/Grafisch/ZWART/WUR_ZW_standard_2021.png}
+% \def\wurlogo{\pgfuseimage{wur_logo}}
+% 
+% % Initially, have an empty logo bar
+% \let\logobarlogo=\relax
+% 
+% % routine to add a logo
+% \def\addlogo#1{%
+%   \ifx\logobarlogo\relax
+%     \def\logobarlogo{#1}
+%   \else
+%     \g@addto@macro{\logobarlogo}{\hspace{\logosep}}
+%     \g@addto@macro{\logobarlogo}{#1}
+%   \fi
+%   }
+% 
+% \def\logobartext#1{\gdef\@logobartext{#1}}
+% \def\@logobartext{}
+% 
+% \def\buildlogobar{%
+%   \noindent\hbox to \paperwidth{%
+%     \hspace*{\logosep}
+%     \logobarlogo
+%     \ifx\logobarlogo\relax\else\hspace{\logosep}\fi
+%     \hfill
+%     \hbox{\vbox to \logobarheight{\vfill\hbox{{\usebeamerfont{logobar}\usebeamercolor[fg]{logobar}\@logobartext}}\vfill}}%
+%     \hspace*{\logosep}}}
+% 
+% \def\footline{
+%   \begin{pgfpicture}{0cm}{0cm}{\the\paperwidth}{\the\logobarheight}
+%     % Draw a blue line to mark the logo bar
+%     \pgfsetstrokecolor{black}
+%     \pgfpathmoveto{\pgfpoint{0pt}{\the\logobarheight}}
+%     \pgfpathlineto{\pgfpoint{\the\paperwidth}{\the\logobarheight}}
+%     \pgfusepath{stroke}
+%     % Make a TeX box containing the actual logo bar contents, and place it at the lower-left
+%     \pgftext[left,bottom]{\buildlogobar}
+%    \end{pgfpicture}
+% }
+% 
+% \setbeamertemplate{footline}{\footline}
+
+\setbeamertemplate{title page}{
+  \usebeamerfont{title}\inserttitle\par
+  \usebeamerfont{subtitle}\insertsubtitle\par
+  \usebeamerfont{author}\insertauthor\par
+  \usebeamerfont{date}\insertdate\par
+  \vfill
+}
+
+% \setbeamertemplate{footline}{
+%   \insertlogo
+%   \hfill
+%   \insertframenumber\,/\,\inserttotalframenumber\kern2em
+% }
+
+% \renewcommand{\footnoterule}{}
+
+
+\logo{%
+  \includegraphics[
+    trim=0 10 0 10,
+    clip,
+    height=.5cm,
+    keepaspectratio
+  ]{01_WUR_standard/Grafisch/ZWART/WUR_ZW_standard_2021.png}%
+}
+
+
+
