@@ -2,11 +2,10 @@
 @use "bulma/bulma.scss";
 
 body {
-  margin: 8em;
+  margin: 4em;
   font-family: monospace;
   input#orthogroup-select {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
+    margin-top: 1.2em;
+    max-width: 4em;
   }
 }
