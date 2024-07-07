@@ -1,10 +1,14 @@
-1 == "1.0"; // equality operator attempts to convert
+// equality operator
+// attempts to convert
+1 == "1.0";
 // true
 
 1 != "1.0";
 // false
 
-1 === "1.0"; // strict equality operator does not convert
+// strict equality operator
+// does not convert
+1 === "1.0";
 // false
 
 1 !== "1.0";

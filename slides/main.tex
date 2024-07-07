@@ -76,7 +76,7 @@
 
 \begin{frame}
 
-    {\huge Assignment I}
+    {\huge Assignment 1}
 
     \vspace{1em}
     Explore two versions of a simple static website:
@@ -92,6 +92,7 @@
     \begin{itemize}
         \item Open the workshop folder in an IDE (e.g. VSCode)
         \item Open \texttt{index.html} in a web browser
+        \item Open the developer tools (\texttt{cmd + shift + C})
         \item Click the button
         \item Explore the code
         \item \textit{Discuss}
@@ -100,14 +101,186 @@
 
 \begin{frame}{Some technical background}
 
+    {\LARGE Core components}
+
+    \begin{itemize}
+        \item {\large HTML:} HyperText Markup Language, i.e. text with links and sematics for 'function' such as headers or links.
+        \item {\large JS:} JavaScript, actions, interaction, Document Object Model (DOM).
+        \item {\large CSS:} Cascading Style Sheets, visual styling. Style applies to HTML tag and all it's children (hence 'cascading').
+    \end{itemize}
+    \vspace{2em}
+
+    {\LARGE Key concepts}
+
+    \begin{itemize}
+        \item \underline{Asynchronous programming:} networks can be slow, local computation should not wait (examples in next slides)
+        \item Using the browser as a debugger and REPL
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Javascript quirks I}
+\begin{frame}
+
+    {\huge We have to talk about AJAX}
+
+    \begin{itemize}
+        \item \underline{A}synchronous \underline{J}avascript \underline{A}nd \underline{X}ml
+        \item Originally introduced as concept for typical web tasks
+        \item Does not actually have to use XML (today we use JSON)
+        \item Modern JS: implemented in e.g. \texttt{fetch} API
+    \end{itemize}
+
+    \begin{figure}
+        \includegraphics[
+            width=.25\linewidth,
+            trim={4cm 10cm 4cm 4cm},
+            clip
+        ]{figures/cruijf.jpg}
+
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Javascript quirks {\small (variables)}}
+    Many aspects of JS are superficially similar to Python
+    \begin{figure}
+        \begin{minipage}{.4\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/variables.py.png}
+            \\ \tiny{Python}
+        \end{minipage}
+        \begin{minipage}{.35\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/variables.js.png}
+            \\ \tiny{Javascript}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Javascript quirks {\small (functions)}}
+    \begin{figure}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/function.py.png}
+            \\ \tiny{Python}
+        \end{minipage}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/function.js.png}
+            \\ \tiny{Javascript}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Javascript quirks {\small (classes)}}
+    \begin{figure}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/class.py.png}
+            \\ \tiny{Python}
+        \end{minipage}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/class.js.png}
+            \\ \tiny{Javascript}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Javascript quirks {\small (operations)}}
+    \begin{figure}
+        \begin{minipage}{.4\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/operations.py.png}
+            \\ \tiny{Python}
+        \end{minipage}
+        \begin{minipage}{.4\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/operations.js.png}
+            \\ \tiny{Javascript}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Javascript quirks {\small (types)}}
+    \begin{figure}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/types.py.png}
+            \\ \tiny{Python}
+        \end{minipage}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/types.js.png}
+            \\ \tiny{Javascript}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Javascript quirks {\small (comments)}}
+    \begin{figure}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/comments.py.png}
+            \\ \tiny{Python}
+        \end{minipage}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/comments.js.png}
+            \\ \tiny{Javascript}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Javascript quirks {\small (controlflow)}}
+    \begin{figure}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/controlflow.py.png}
+            \\ \tiny{Python}
+        \end{minipage}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/controlflow.js.png}
+            \\ \tiny{Javascript}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Javascript quirks {\small (string formatting)}}
+    \begin{figure}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/string_formatting.py.png}
+            \\ \tiny{Python}
+        \end{minipage}
+        \begin{minipage}{.45\linewidth}
+            \includegraphics[
+                width=\linewidth,
+            ]{figures/string_formatting.js.png}
+            \\ \tiny{Javascript}
+        \end{minipage}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Modern JS}
+    Increasingly large/complex designs result in modern framework approach: introduce template language that emphasizes modularity, 'transpile' to HTML, JS, CSS.
+
     \begin{itemize}
-        \item frameworks
+        \item Some common frameworks: \underline{React}, Vue, Angular, Svelte, etc.
         \item transpiling
         \item component re-use
         \item state management
@@ -115,7 +288,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Assigment II}
+\begin{frame}{Assigment 2}
     Build a React app for visualizing MSAs
 \end{frame}
 

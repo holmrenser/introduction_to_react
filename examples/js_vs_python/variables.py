@@ -11,4 +11,6 @@ b + d
 # "hi hello"
 
 c + d
-# TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# TypeError: unsupported
+# operand type(s) for +:
+# 'int' and 'str'

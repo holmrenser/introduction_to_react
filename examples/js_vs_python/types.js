@@ -14,4 +14,7 @@ const arr = [1, 2, "Hi"];
 
 // Object
 const obj = { 1: 2, b: 2, [[1, "Hi"]]: [1, 2, 3] };
-// Some keys get converted! --> Object { 1: 2, b: 2, "1,Hi": (3) […] }
+/* 
+Some keys get converted! 
+--> Object { 1: 2, b: 2, "1,Hi": (3) […] }
+*/
