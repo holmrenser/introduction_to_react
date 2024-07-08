@@ -1,6 +1,6 @@
 # LaTeX
 slides/*.aux
-slides/*.bbl
+slides/*.bbl*
 slides/*.bcf
 slides/*.fdb_latexmk
 slides/*.nav
@@ -10,6 +10,7 @@ slides/*.run.xml
 slides/*.fls
 slides/*.synctex.gz
 slides/*.toc
+slides/*.blg
 
 
 

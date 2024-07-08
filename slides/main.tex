@@ -21,6 +21,9 @@
 
 \begin{frame}
     \titlepage
+    \begin{figure}
+        \includegraphics[width=.7\linewidth]{figures/get-in-loser.pdf}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Web development in bioinformatics}
@@ -135,8 +138,19 @@
             trim={4cm 10cm 4cm 4cm},
             clip
         ]{figures/cruijf.jpg}
-
+        \\
+        {\tiny The other AJAX}
     \end{figure}
+\end{frame}
+
+\begin{frame}{Event loop}
+    On the web, we send requests and respond \textit{asynchronously}
+    \begin{figure}
+        \includegraphics[
+            width=.5\linewidth,
+        ]{figures/event-loop.pdf}
+    \end{figure}
+
 \end{frame}
 
 \begin{frame}{Javascript quirks {\small (variables)}}
@@ -281,18 +295,63 @@
 
     \begin{itemize}
         \item Some common frameworks: \underline{React}, Vue, Angular, Svelte, etc.
-        \item transpiling
-        \item component re-use
-        \item state management
-        \item AJAX
+        \item Transpiling/bundling
+        \item Component re-use
+        \item State management
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Assigment 2}
     Build a React app for visualizing MSAs
+
+    \begin{itemize}
+        \item Explore created folder structure: \texttt{package.json}, \texttt{node\_modules}, \texttt{vite.config.js}, \texttt{eslintrc.cjs}, \texttt{index.html}
+    \end{itemize}
+
+    \includegraphics[
+        width=.8\linewidth,
+    ]{figures/initialize-app.png}
 \end{frame}
 
+\begin{frame}{Assignment 2 {\small continued}}
+    Fetch some JSON data (available in the github repository of this tutorial)
 
+    Example URL:
+
+    \url{https://raw.githubusercontent.com/holmrenser/introduction_to_react/main/data/1.json}
+
+    \begin{figure}
+        \centering
+        \includegraphics[
+            width=.5\linewidth,
+        ]{figures/fetch.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Assignment 2 {\small continued}}
+    Add an existing MSA component from \texttt{react-bio-viz}
+
+    \url{https://github.com/genenotebook/react-bio-viz}
+
+    \includegraphics[
+        width=.8\linewidth,
+    ]{figures/rbv-msa.png}
+\end{frame}
+
+\begin{frame}{Assignment 2 {\small continued}}
+    Responding to changing dependencies
+
+    \includegraphics[
+        width=.8\linewidth,
+    ]{figures/use-effect.png}
+\end{frame}
+
+\begin{frame}{Conclusions}
+    \begin{itemize}
+        \item Modern JS focuses on re-usable components
+        \item Toolchains help developers, obscure technical details
+    \end{itemize}
+\end{frame}
 
 \end{document}
 
